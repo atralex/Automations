@@ -3,6 +3,12 @@
 # Nombre del proyecto
 PROJECT_NAME=$1
 
+# Verificar que se haya ingresado un nombre de proyecto
+if [ -z "$PROJECT_NAME" ]; then
+    echo "Por favor ingrese el nombre del proyecto"
+    return
+fi
+
 # Crear directorio del proyecto y navegar a él
 mkdir -p "$PROJECT_NAME"
 cd "$PROJECT_NAME"
